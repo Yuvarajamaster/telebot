@@ -21,7 +21,7 @@ fan_off = ["turn off the fan","turn off fan","fan off","off the fan"]
 #to make the light ON
 def ledon(bot,update):
   chat_id = bot.message.chat_id
-  photo_url = 'https://media.baamboozle.com/uploads/images/68811/1618179100_34871_gif-url.gif'
+  photo_url = 'https://cdn.pixabay.com/photo/2019/09/29/22/06/light-bulb-4514505__480.jpg'
   bot.message.reply_text("Light turned on")
   update.bot.sendPhoto(chat_id=chat_id,photo=photo_url)
   aio.send('led', 1)
@@ -29,25 +29,25 @@ def ledon(bot,update):
 #to make the light OFF
 def ledoff(bot,update):
   chat_id = bot.message.chat_id
-  path='https://labblog.uofmhealth.org/sites/lab/files/2018-11/michigan-med-l-ocd-study.gif'
+  path='https://www.artnews.com/wp-content/uploads/2021/07/AdobeStock_3317413.jpeg'
   bot.message.reply_text("light turned off")
-  update.bot.sendAnimation(chat_id=chat_id,animation=path)
+  update.bot.sendPhoto(chat_id=chat_id,photo=path)
   aio.send('led', 0)
 
 #make fan ON
 def fanon(bot,update):
   chat_id = bot.message.chat_id
-  path='https://mir-s3-cdn-cf.behance.net/project_modules/disp/bafb3929035897.55decb26f207b.gif'
+  path='https://i.ytimg.com/vi/bXkcJ2wKMh8/maxresdefault.jpg'
   bot.message.reply_text("fan ON panitan")
-  update.bot.sendAnimation(chat_id=chat_id,animation=path)
+  update.bot.sendPhoto(chat_id=chat_id,photo=path)
   aio.send('fan', 1)
 
 #make fan OFF
 def fanoff(bot,update):
   chat_id = bot.message.chat_id
-  path='https://d1j8pt39hxlh3d.cloudfront.net/uploads/thumbs_up_sign_256_1.gif'
+  path='https://i.ytimg.com/vi/wXghy-PJpgo/maxresdefault.jpg'
   bot.message.reply_text("Fan off panitan")
-  update.bot.sendAnimation(chat_id=chat_id,animation=path)
+  update.bot.sendPhoto(chat_id=chat_id,photo=path)
   aio.send('fan', 0)
 
 #to get the status of light
