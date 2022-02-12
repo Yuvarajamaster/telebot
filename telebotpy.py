@@ -21,16 +21,16 @@ fan_off = ["turn off the fan","turn off fan","fan off","off the fan"]
 #to make the light ON
 def ledon(bot,update):
   chat_id = bot.message.chat_id
-  animation_url = 'https://media.baamboozle.com/uploads/images/68811/1618179100_34871_gif-url.gif'
-  bot.message.reply_text("Done,lights turned on!✌")
-  update.bot.sendAnimation(chat_id=chat_id,animation=animation_url,duration=2)
+  photo_url = 'https://media.baamboozle.com/uploads/images/68811/1618179100_34871_gif-url.gif'
+  bot.message.reply_text("Light turned on")
+  update.bot.sendPhoto(chat_id=chat_id,photo=photo_url)
   aio.send('led', 1)
 
 #to make the light OFF
 def ledoff(bot,update):
   chat_id = bot.message.chat_id
   path='https://labblog.uofmhealth.org/sites/lab/files/2018-11/michigan-med-l-ocd-study.gif'
-  bot.message.reply_text("Done,lights turned off!👍")
+  bot.message.reply_text("light turned off")
   update.bot.sendAnimation(chat_id=chat_id,animation=path)
   aio.send('led', 0)
 
@@ -38,7 +38,7 @@ def ledoff(bot,update):
 def fanon(bot,update):
   chat_id = bot.message.chat_id
   path='https://mir-s3-cdn-cf.behance.net/project_modules/disp/bafb3929035897.55decb26f207b.gif'
-  bot.message.reply_text("Done,fan turned on!✌")
+  bot.message.reply_text("fan ON panitan")
   update.bot.sendAnimation(chat_id=chat_id,animation=path)
   aio.send('fan', 1)
 
@@ -46,7 +46,7 @@ def fanon(bot,update):
 def fanoff(bot,update):
   chat_id = bot.message.chat_id
   path='https://d1j8pt39hxlh3d.cloudfront.net/uploads/thumbs_up_sign_256_1.gif'
-  bot.message.reply_text("Done,fan turned off!")
+  bot.message.reply_text("Fan off panitan")
   update.bot.sendAnimation(chat_id=chat_id,animation=path)
   aio.send('fan', 0)
 
@@ -70,11 +70,11 @@ def fanOnorOff(bot,update):
   
 #for invalid commands  
 def inval(bot,update): 
-  bot.message.reply_text("Invalid command!")
+  bot.message.reply_text("command not valid")
 
 #greeting 
 def greet(bot,update):
-  bot.message.reply_text("👋Hi!.. You can give me commands to turn ON or OFF the light or fan and also to get status of light and fan.")
+  bot.message.reply_text("Hey dude!")
   
     
 #about the bot  
